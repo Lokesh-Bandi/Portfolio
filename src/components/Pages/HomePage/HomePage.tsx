@@ -22,7 +22,11 @@ const HomePage: FunctionComponent<HomePageProps> = (): ReactElement => {
     <div className={styles.homeContainer}>
       <div className={styles.personalDescSection}>
         <div className={styles.greetingBlock}>{`Hello!!!`}</div>
-        <div className={styles.nameBlock}>{`I'm Lokesh Bandi`}</div>
+        <div className={styles.nameBlock}>
+          {`I`}
+          <span className={styles.nameQ}>{`'`}</span>
+          {`m Lokesh Bandi`}
+        </div>
         <div className={styles.smallDesc}>{smallDesc}</div>
         <div className={styles.startButton}>{`Get Started`}</div>
       </div>

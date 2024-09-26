@@ -15,6 +15,7 @@
 .logo {
   font-size: 24px;
   font-weight: 600;
+  cursor: pointer;
   color: #000000;
 }
 .navItems {
@@ -34,7 +35,8 @@
   transition: all 100ms ease-in;
 }
 .navItem:hover:not(.navItem_active) {
-  transform: scale(1.1);
+  font-weight: bold;
+  color: #20B2AA;
 }
 .navItem_active {
   color: #3D52A0;
@@ -46,7 +48,13 @@
   font-size: 18px;
   font-weight: 600;
   color: #FFFFFF;
+  border: 2px solid #20B2AA;
   border-radius: 10px;
-  background-color: #7091E6;
+  background-color: #20B2AA;
   cursor: pointer;
+  box-shadow: rgba(50, 50, 93, 0.25) 0 13px 27px -5px, rgba(0, 0, 0, 0.3) 0 8px 16px -8px;
+}
+.contactBox:hover {
+  color: #20B2AA;
+  background-color: #FFFFFF
 }

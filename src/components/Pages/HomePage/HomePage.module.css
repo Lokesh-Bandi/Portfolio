@@ -17,21 +17,26 @@
   flex: 60%;
   align-items: flex-start;
   justify-content: center;
-  gap: 10px;
+  gap: 20px;
 }
 .greetingBlock {
   font-size: 30px;
   font-weight: 600;
+  color: #00A86B;
   letter-spacing: .1em;
 }
 .nameBlock {
   font-size: 45px;
   letter-spacing: .01em;
 }
+.nameQ {
+  color: #00A86B;
+}
 .smallDesc {
   display: flex;
   width: 100%;
   font-size: 18px;
+  text-align: justify;
 }
 .profilePhotoSection {
   display: flex;
