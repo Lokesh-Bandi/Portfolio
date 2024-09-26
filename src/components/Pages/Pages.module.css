@@ -1,0 +1,5 @@
+.pagesSection {
+  width: 100%;
+  margin-top: var(--nav-height);
+  background-color: inherit;
+}
