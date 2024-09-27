@@ -1,5 +1,7 @@
 .pagesSection {
   width: 100%;
   margin-top: var(--nav-height);
+  padding: 0 150px;
   background-color: inherit;
+  box-sizing: border-box;
 }

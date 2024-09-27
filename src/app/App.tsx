@@ -1,11 +1,12 @@
 import AppGrid from '../AppGrid/AppGrid';
 import { AppRoot } from '../appRoot/AppRoot';
+import { AppRouter } from '../appRouter/AppRouter';
 import './styles.module.css';
 
 export const App = () => {
   return (
     <AppRoot>
-      <AppGrid />
+      <AppRouter />
     </AppRoot>
   );
 };

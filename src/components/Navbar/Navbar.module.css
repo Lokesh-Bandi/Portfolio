@@ -35,7 +35,6 @@
   transition: all 100ms ease-in;
 }
 .navItem:hover:not(.navItem_active) {
-  font-weight: bold;
   color: #20B2AA;
 }
 .navItem_active {
