@@ -1,1 +1,156 @@
-.container {}
+.container {
+  padding: 50px 50px 0 50px;
+  box-sizing: border-box;
+}
+.gridWrapper {
+  display: grid;
+  grid-template-areas:
+    "box1 ."
+    ". box2"
+    "box3 .";
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(3, max-content);
+  column-gap: 20px;
+  row-gap: 50px;
+  user-select: none;
+}
+.boxWrapper {
+  position: relative;
+  padding: 8px;
+  border-radius: 10px;
+  background: linear-gradient(to right, #c6ffdd, #fbd786, #f7797d);
+  box-sizing: border-box;
+  box-shadow: rgba(0, 0, 0, 0.35) 0 5px 15px;
+}
+.innerBox {
+  z-index: 1;
+  position: relative;
+  display: flex;
+  padding: 16px;
+  border-radius: 10px;
+  flex-direction: column;
+  gap: 14px;
+  letter-spacing: 0.02em;
+  box-sizing: border-box;
+}
+.innerBox::after {
+  z-index: 2;
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: inherit;
+  background: linear-gradient(-45deg, #eeeeee 40%, #fafafa 50%, #eeeeee 60%);
+  background-size: 300%;
+  background-position-x: 100%;
+  transition: transform 330ms linear;
+  animation: shimmer 1s infinite linear;
+}
+.boxWrapper:hover .innerBox::after {
+  transform: scale(97%);
+}
+.qualificationSection {
+  z-index: 3;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+.qualificationTitle {
+  font-size: 20px;
+  font-weight: bold;
+  letter-spacing: 0.05em;
+}
+.courseSection {
+  z-index: 3;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.courseNameSection {
+  display: flex;
+  font-size: 18px;
+  font-weight: bold;
+  color: #660000;
+  align-items: center;
+  gap: 8px;
+}
+.courseDef {
+  font-size: 14px;
+  color: #696969;
+}
+.gradeBox {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+.grade {
+  font-size: 20px;
+  font-weight: bold;
+  color: #ca5900;
+  animation: slideIn 500ms ease-in forwards;
+}
+.collegeSection {
+  z-index: 3;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+a {
+  margin: 0;
+  padding: 0;
+  color: inherit;
+  border: none;
+  background: none;
+  text-decoration: none;
+}
+.collegeInfo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 17px;
+  font-weight: 600;
+  color: #005d73;
+}
+.collegeName {
+  text-decoration: none;
+}
+.passoutInfo {
+  font-size: 16px;
+  font-weight: bold;
+  letter-spacing: 0.08em;
+  color: #696969;
+}
+.locationSection {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  align-items: center;
+  font-size: 16px;
+  font-weight: bold;
+  color: #005d73;
+}
+.icon {
+  z-index: 99;
+  position: absolute;
+  top: -20px;
+  left: -10px;
+}
+@keyframes shimmer {
+  to {
+    background-position-x: 0%;
+  }
+}
+
+@keyframes slideIn {
+  0% {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
