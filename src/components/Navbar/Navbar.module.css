@@ -52,6 +52,7 @@
   background-color: #20B2AA;
   cursor: pointer;
   box-shadow: rgba(50, 50, 93, 0.25) 0 13px 27px -5px, rgba(0, 0, 0, 0.3) 0 8px 16px -8px;
+  transition: all 200ms linear;
 }
 .contactBox:hover {
   color: #20B2AA;
