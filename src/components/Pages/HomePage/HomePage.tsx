@@ -1,9 +1,12 @@
 import type { CSSProperties, FunctionComponent, ReactElement } from 'react';
+import { FaLinkedin, FaGithub } from 'react-icons/fa';
+import { FaLocationDot } from 'react-icons/fa6';
+import { FcGoogle } from 'react-icons/fc';
 import Lottie from 'react-lottie';
 
 import animatedMan from '../../lotties/man.json';
 
-import { COMPANIES } from './config';
+import { COMPANIES, SOCIAL_LINKS } from './config';
 
 import styles from './HomePage.module.css';
 
@@ -23,6 +26,28 @@ const HomePage: FunctionComponent<HomePageProps> = (): ReactElement => {
   return (
     <div className={styles.homePageWrapper}>
       <div className={styles.homeContainer}>
+        <div className={styles.socialLinks}>
+          <div className={styles.socialLink}>
+            <a href={`mailto:${SOCIAL_LINKS.gmail}`}>
+              <FcGoogle size={32} />
+            </a>
+          </div>
+          <div className={styles.socialLink}>
+            <a href={SOCIAL_LINKS.linkedIn} target={'_blank'} rel="noreferrer">
+              <FaLinkedin color="#2268A7" size={32} />
+            </a>
+          </div>
+          <div className={styles.socialLink}>
+            <a href={SOCIAL_LINKS.github} target={'_blank'} rel="noreferrer">
+              <FaGithub size={32} />
+            </a>
+          </div>
+          <div className={styles.socialLink}>
+            <a href={SOCIAL_LINKS.location} target={'_blank'} rel="noreferrer">
+              <FaLocationDot size={32} color={'#DC4C3E'} />
+            </a>
+          </div>
+        </div>
         <div className={styles.personalDescSection}>
           <div className={styles.greetingBlock}>{`Hello!!!`}</div>
           <div className={styles.nameBlock}>

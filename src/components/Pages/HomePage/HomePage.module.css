@@ -5,7 +5,23 @@
   display: flex;
   width: 100%;
   height: 600px;
-  gap: 50px;
+  gap: 20px;
+}
+.socialLinks {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 24px;
+  flex: 6%;
+}
+.socialLink {
+  height: 32px;
+  cursor: pointer;
+  transition: all 100ms linear;
+}
+.socialLink:hover {
+  transform: scale(110%);
 }
 .personalDescSection {
   display: flex;
@@ -15,7 +31,7 @@
   color: #000000;
   box-sizing: border-box;
   flex-direction: column;
-  flex: 60%;
+  flex: 59%;
   align-items: flex-start;
   justify-content: center;
   gap: 20px;
@@ -42,7 +58,7 @@
 .profilePhotoSection {
   display: flex;
   height: 100%;
-  flex: 40%;
+  flex: 35%;
   align-items: center;
   box-sizing: border-box;
   justify-content: center
