@@ -9,6 +9,21 @@ a {
   text-decoration: none;
 }
 
+/* Scroll bar customiztion */
+*::-webkit-scrollbar {
+  width: 2px;
+}
+
+*::-webkit-scrollbar-track {
+  border-radius: 180px;
+  background-color: transparent;
+}
+
+*::-webkit-scrollbar-thumb {
+  border-radius: 180px;
+  background-color: var(--scrollbar-color);
+}
+
 @font-face {
   font-family: 'Jost';
   src: local('Jost'), url(./fonts/Jost.woff2) format('woff2');
