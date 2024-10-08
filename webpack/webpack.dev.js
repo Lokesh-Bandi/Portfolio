@@ -5,6 +5,7 @@ module.exports = {
   devtool: 'cheap-module-source-map',
   devServer: {
     port: 8084,
+    historyApiFallback: true,
   },
   plugins: [
     new webpack.DefinePlugin({

@@ -2,7 +2,6 @@ import { BrowserRouter, Navigate, Route, Routes } from 'react-router-dom';
 
 import AppGrid from '../AppGrid/AppGrid';
 import { NAV_ITEMS, NAV_ITEMS_ARRAY } from '../components/Navbar/config';
-import ExperiencePage from '../components/Pages/ExperiencePage/ExperiencePage';
 import HomePage from '../components/Pages/HomePage/HomePage';
 
 export const AppRouter = () => {
@@ -10,7 +9,7 @@ export const AppRouter = () => {
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<AppGrid />}>
-          <Route index element={<ExperiencePage />} />
+          <Route index element={<HomePage />} />
           {NAV_ITEMS_ARRAY.map((navItem) => {
             const navItemInfo = NAV_ITEMS[navItem as keyof typeof NAV_ITEMS];
             return (
