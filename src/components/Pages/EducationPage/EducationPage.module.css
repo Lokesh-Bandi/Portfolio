@@ -42,7 +42,9 @@
   width: 100%;
   height: 100%;
   border-radius: inherit;
-  background: linear-gradient(-45deg, #eeeeee 40%, #fafafa 50%, #eeeeee 60%);
+
+  /* background: linear-gradient(-45deg, #eeeeee 40%, #fafafa 50%, #eeeeee 60%); */
+  background: #FFFFFF;
   background-size: 300%;
   background-position-x: 100%;
   transition: transform 330ms linear;

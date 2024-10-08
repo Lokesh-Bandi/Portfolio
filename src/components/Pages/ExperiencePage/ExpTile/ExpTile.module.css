@@ -1,1 +1,105 @@
-.container {}
+.tile {
+  position: relative;
+  display: flex;
+  padding: 20px;
+  flex-direction: column;
+  gap: 10px;
+  box-sizing: border-box;
+  text-align: justify;
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0 3px 8px;
+}
+.companyName {
+  font-size: 20px;
+  font-weight: bold;
+}
+.yearsOfExp {
+  font-size: 16px;
+  font-weight: 600;
+  color: #666666;
+}
+.companyLogo {
+  position: absolute;
+  left: 100%;
+  transform: translate(-100%, -80%);
+}
+.roleInfoSection {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.roleTitle {
+  font-size: 16px;
+  font-weight: 500;
+  letter-spacing: 0.05em;
+}
+.workExp {
+  color: #333333;
+}
+.sectionTitle {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #999999;
+}
+.skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+}
+.projects{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+}
+.skillwrapper {
+  padding: 8px 12px;
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--textColor, '#000000');
+  border: 2px solid var(--textColor, '#000000');
+  border-radius: 10px;
+  background: var(--bgColor, '#FFFFFF');
+  box-sizing: border-box;
+  letter-spacing: .05em;
+}
+.projectwrapper {
+  z-index: 2;
+  position: relative;
+  padding: 8px 12px;
+  font-size: 16px;
+  font-weight: 600;
+  box-sizing: border-box;
+  border-radius: 10px;
+  background: #FFFFCC;
+  letter-spacing: .05em;
+}
+.projectwrapper::before {
+  z-index: -1;
+  content: '';
+  position: absolute;
+  top: -2px;
+  right: -2px;
+  bottom: -2px;
+  left: -2px;
+  border-radius: inherit;
+  background: #FFFFFF;
+}
+.technologiesSection, .projectsSection {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.locationSection {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 6px;
+  color: #DC4C3E;
+}

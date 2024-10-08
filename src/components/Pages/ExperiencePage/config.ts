@@ -1,5 +1,8 @@
+import { CSSProperties } from 'react';
+
 import arriseSVG from '../../../../assets/companies/arrise.svg';
 import darwinBoxLogo from '../../../../assets/companies/darwinbox.svg';
+import { SKILLS } from '../../../constants';
 
 export interface companyDetailsType {
   companyName: string;
@@ -11,13 +14,14 @@ export interface companyDetailsType {
     asset: any;
     styles: Record<string, any>;
   };
-  skills: string[];
+  skills: SKILLS[];
   workExp: string[];
   yearOfExp: {
     startDate: string;
     endDate: null | string;
   };
   isCurrent: boolean;
+  customStyles?: CSSProperties;
 }
 export const companyDetails: Record<string, companyDetailsType> = {
   arrise: {
@@ -36,18 +40,18 @@ export const companyDetails: Record<string, companyDetailsType> = {
       asset: arriseSVG,
       styles: {
         height: '40px',
+        backgroundColor: '#FFFFFF',
       },
     },
     skills: [
-      'Typescript',
-      'Javascript',
-      'React',
-      'NodeJs',
-      'Redux',
-      'Webpack',
-      'Rxjs',
-      'Websockets',
-      'GitLab',
+      SKILLS.typescript,
+      SKILLS.javascript,
+      SKILLS.react,
+      SKILLS.nodeJs,
+      SKILLS.redux,
+      SKILLS.webpack,
+      SKILLS.websockets,
+      SKILLS.gitLab,
     ],
     workExp: [
       `Developed 4 highly scalable live casino games with advanced user interfaces and rich UI animations, achieving game load times of under 1 sec. Collaborated closely with cross-functional teams to deliver these projects within an 18-month timeframe.`,
@@ -58,6 +62,9 @@ export const companyDetails: Record<string, companyDetailsType> = {
       endDate: null,
     },
     isCurrent: true,
+    customStyles: {
+      background: 'linear-gradient(to top, #e4e3f7, #FFFFFF)',
+    },
   },
   darwinbox: {
     companyName: 'Darwinbox Digital Solutions',
@@ -73,13 +80,12 @@ export const companyDetails: Record<string, companyDetailsType> = {
       },
     },
     skills: [
-      'Javascript',
-      'NodeJs',
-      'ExpressJS',
-      'BDD',
-      'MongoDB',
-      'SQL',
-      'GitLab',
+      SKILLS.javascript,
+      SKILLS.expressJs,
+      SKILLS.nodeJs,
+      SKILLS.sql,
+      SKILLS.mongoDB,
+      SKILLS.gitLab,
     ],
     workExp: [
       `Contributed to analytics by optimizing report generation and enhancing data visualization.`,
@@ -90,6 +96,9 @@ export const companyDetails: Record<string, companyDetailsType> = {
       endDate: '07-07-2022',
     },
     isCurrent: false,
+    customStyles: {
+      background: 'linear-gradient(to top, #e0eff9, #FFFFFF)',
+    },
   },
   darwinBoxIntern: {
     companyName: 'DarwinBox Digital Solutions',
@@ -105,13 +114,12 @@ export const companyDetails: Record<string, companyDetailsType> = {
       },
     },
     skills: [
-      'Javascript',
-      'NodeJs',
-      'ExpressJS',
-      'BDD',
-      'MongoDB',
-      'SQL',
-      'GitLab',
+      SKILLS.javascript,
+      SKILLS.expressJs,
+      SKILLS.nodeJs,
+      SKILLS.mongoDB,
+      SKILLS.sql,
+      SKILLS.gitLab,
     ],
 
     workExp: [
@@ -124,5 +132,8 @@ export const companyDetails: Record<string, companyDetailsType> = {
       endDate: '01-05-2022',
     },
     isCurrent: false,
+    customStyles: {
+      background: 'linear-gradient(to top, #e0eff9, #FFFFFF)',
+    },
   },
 };
