@@ -4,16 +4,22 @@ import arriseSVG from '../../../../assets/companies/arrise.svg';
 import darwinBoxLogo from '../../../../assets/companies/darwinbox.svg';
 import { SKILLS } from '../../../constants';
 
-export interface companyDetailsType {
-  companyName: string;
+export interface CompanyInfoInterface {
+  name: string;
   field: string;
-  projects: string[];
-  location: string;
-  roleDesc: string;
   companyLogo: {
     asset: any;
-    styles: Record<string, any>;
+    styles?: Record<string, any>;
   };
+  webLink?: string;
+}
+
+export interface CompanyDetailsType {
+  companyInfo: CompanyInfoInterface;
+  location: string;
+  projects: string[];
+  roleDesc: string;
+
   skills: SKILLS[];
   workExp: string[];
   yearOfExp: {
@@ -23,10 +29,20 @@ export interface companyDetailsType {
   isCurrent: boolean;
   customStyles?: CSSProperties;
 }
-export const companyDetails: Record<string, companyDetailsType> = {
+export const companyDetails: Record<string, CompanyDetailsType> = {
   arrise: {
-    companyName: 'Arrise powering pragmatic play',
-    field: 'Live casinos and slots (Gaming)',
+    companyInfo: {
+      name: 'Arrise powering pragmatic play',
+      field: 'Live casinos and slots (Gaming)',
+      webLink: 'https://arrise.com/',
+      companyLogo: {
+        asset: arriseSVG,
+        styles: {
+          height: '40px',
+          backgroundColor: '#FFFFFF',
+        },
+      },
+    },
     projects: [
       'Mega Sicbo',
       'Baccarat',
@@ -36,13 +52,6 @@ export const companyDetails: Record<string, companyDetailsType> = {
     ],
     location: 'Hyderabad, Telangana',
     roleDesc: 'Software Development Engineer',
-    companyLogo: {
-      asset: arriseSVG,
-      styles: {
-        height: '40px',
-        backgroundColor: '#FFFFFF',
-      },
-    },
     skills: [
       SKILLS.typescript,
       SKILLS.javascript,
@@ -67,18 +76,21 @@ export const companyDetails: Record<string, companyDetailsType> = {
     },
   },
   darwinbox: {
-    companyName: 'Darwinbox Digital Solutions',
-    field: 'HR Management Software',
+    companyInfo: {
+      name: 'Darwinbox Digital Solutions',
+      field: 'HR Management Software',
+      webLink: 'https://darwinbox.com/',
+      companyLogo: {
+        asset: darwinBoxLogo,
+        styles: {
+          height: '40px',
+          backgroundColor: '#0370BE',
+        },
+      },
+    },
     projects: ['Auto Reports and Analytics Generations'],
     location: 'Hyderabad, Telangana',
     roleDesc: 'Software Engineer',
-    companyLogo: {
-      asset: darwinBoxLogo,
-      styles: {
-        height: '40px',
-        backgroundColor: '#0370BE',
-      },
-    },
     skills: [
       SKILLS.javascript,
       SKILLS.expressJs,
@@ -101,18 +113,21 @@ export const companyDetails: Record<string, companyDetailsType> = {
     },
   },
   darwinBoxIntern: {
-    companyName: 'DarwinBox Digital Solutions',
-    field: 'HR Management Software',
+    companyInfo: {
+      name: 'Darwinbox Digital Solutions',
+      field: 'HR Management Software',
+      webLink: 'https://darwinbox.com/',
+      companyLogo: {
+        asset: darwinBoxLogo,
+        styles: {
+          height: '40px',
+          backgroundColor: '#0370BE',
+        },
+      },
+    },
     projects: ['User Analytics Platform'],
     location: 'Hyderabad, Telangana',
     roleDesc: 'Engineering Intern',
-    companyLogo: {
-      asset: darwinBoxLogo,
-      styles: {
-        height: '40px',
-        backgroundColor: '#0370BE',
-      },
-    },
     skills: [
       SKILLS.javascript,
       SKILLS.expressJs,

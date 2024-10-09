@@ -4,15 +4,16 @@ import { GoProjectSymlink } from 'react-icons/go';
 import { MdMilitaryTech } from 'react-icons/md';
 
 import { SKILLS_CONFIG } from '../../../../constants';
-import { companyDetailsType } from '../config';
+import { CompanyDetailsType, CompanyInfoInterface } from '../config';
 
 import styles from './ExpTile.module.css';
 
-interface ExpTileProps extends companyDetailsType {}
+interface ExpTileProps extends CompanyDetailsType {
+  companyCoreDetails: CompanyInfoInterface;
+}
 
 const ExpTile: FunctionComponent<ExpTileProps> = ({
-  companyLogo,
-  companyName,
+  companyCoreDetails,
   yearOfExp,
   workExp,
   roleDesc,
@@ -24,11 +25,15 @@ const ExpTile: FunctionComponent<ExpTileProps> = ({
 }): ReactElement => {
   return (
     <div className={styles.tile} style={customStyles}>
-      <div className={styles.companyName}>{companyName}</div>
+      <div className={styles.companyName}>
+        <a href={companyCoreDetails?.webLink} target="_blank" rel="noreferrer">
+          {companyCoreDetails.name}
+        </a>
+      </div>
       <div className={styles.companyLogo}>
         <img
-          src={companyLogo.asset}
-          style={companyLogo.styles as CSSProperties}
+          src={companyCoreDetails.companyLogo.asset}
+          style={companyCoreDetails.companyLogo.styles as CSSProperties}
           alt="logo"
         />
       </div>

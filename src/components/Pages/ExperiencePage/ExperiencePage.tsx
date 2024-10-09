@@ -13,9 +13,16 @@ const ExperiencePage: FunctionComponent<
   return (
     <div className={styles.container}>
       {Object.keys(companyDetails).map((eachCompany) => {
-        const companyInfo =
+        const expDetails =
           companyDetails[eachCompany as keyof typeof companyDetails];
-        return <ExpTile key={companyInfo.companyName} {...companyInfo} />;
+        const companyCoreDetails = expDetails.companyInfo;
+        return (
+          <ExpTile
+            key={companyCoreDetails.name}
+            companyCoreDetails={companyCoreDetails}
+            {...expDetails}
+          />
+        );
       })}
     </div>
   );

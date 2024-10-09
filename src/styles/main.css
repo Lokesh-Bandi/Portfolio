@@ -8,6 +8,10 @@ a {
   background: none;
   text-decoration: none;
 }
+a:hover {
+  color: #009999;
+  transition: color 100ms ease-in;
+}
 
 /* Scroll bar customiztion */
 *::-webkit-scrollbar {
